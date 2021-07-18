@@ -21,9 +21,10 @@ export const BREAKPOINTS = {
 };
 
 export const Z_INDICES = {
-  hero: 1,
-  mainContent: 1,
-  footer:1,
-  sideBar:3,
-  burger:10,
+  hero: 1,//1
+  navBar:2,//3
+  mainContent: 3,//2
+  footer:3,//2
+  sideBar:5,//4
+  burger:10,//10
 };
