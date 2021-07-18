@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     // ## colors variables
     --color-text: #131415;
     --color-background:white;
+    /* --color-background:#f3f8ff; */
     --color-homepage-light: linear-gradient( 0deg,#D3EAF8,#BFDEF2);
     --color-homepage-dark: linear-gradient( 0deg,rgb(179 229 255 / 10%),rgb(14 20 27/ 80%));
     --color-homepage-light:#bfdef2;
@@ -36,8 +37,19 @@ const GlobalStyle = createGlobalStyle`
 
     --scrollbarBG: white;
     --thumbBG: var(--color-gray-400);
+
+    --color-subtle-background: #F5F9FF;//#FAFAFA;//#f3f8ff;
+    /* --color-primary: #293EDB;//#4B60E7;//#5773ff; */ //old
+    /* --color-primary:#4262FF;//new */
+    --color-primary:#4D61FF;
+    //light #4262FF
+    //dark #6B84FF
+    --color-secondary: #ff0a78;
+    --color-error: #fa3879;
+    
+    --social-svg-fill-color : invert(1%) sepia(0%) saturate(6038%) hue-rotate(336deg) brightness(99%) contrast(86%); // equal to white
     // ## colors variables
-  
+
   }
   [data-theme="dark"] {
         // ## colors variables
@@ -48,6 +60,8 @@ const GlobalStyle = createGlobalStyle`
     --color-homepage-bg:#0e141b;
     --color-blurred-background:#0e141bd9;
     --scrollbarBG: var(--color-gray-700);
+    --color-primary:#5773FF;//new 
+    --social-svg-fill-color : invert(100%) sepia(0%) saturate(7426%) hue-rotate(117deg) brightness(119%) contrast(119%); // equal to #131415
         // ## colors variables
   }
   html, body {
@@ -124,6 +138,7 @@ const GlobalStyle = createGlobalStyle`
   }
   a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
   }
  
   p {
