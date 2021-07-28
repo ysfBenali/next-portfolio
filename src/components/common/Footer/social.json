@@ -1,0 +1,26 @@
+[
+    {
+      "id": 0,
+      "name": "Discord",
+      "link": "https://discord.com/users/714113166123991078",
+      "icon": "/assets/icons/discord.svg"
+    },
+    {
+      "id": 1,
+      "name": "Github",
+      "link": "https://github.com/ysfBenali",
+      "icon": "/assets/icons/github.svg"
+    },
+    {
+      "id": 2,
+      "name": "Linkedin",
+      "link": "https://www.linkedin.com/in/ysfbenali/",
+      "icon": "/assets/icons/linkedin.svg"
+    },
+    {
+      "id": 3,
+      "name": "Twitter",
+      "link": "https://twitter.com/ysfBenAli",
+      "icon": "/assets/icons/twitter.svg"
+    }
+  ]
