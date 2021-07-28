@@ -43,7 +43,7 @@ export const Backdrop = styled.button`
   height: 100vh;
   border: none;
   background: var(--color-blurred-background);
-  cursor: pointer;
+  /* cursor: pointer; */
   backdrop-filter: ${({ open }) => (open ? 'blur(8px)' : 'blur(0)')};
   filter: ${({ open }) => (open ? 'blur(8px)' : 'blur(0)')};
 `;

@@ -1,4 +1,5 @@
 import { useTheme, useToggleTheme } from 'providers/ThemeProvider';
+import Image from 'next/image';
 import { Wrapper } from './styles';
 
 const ToggleTheme = () => {
@@ -8,9 +9,21 @@ const ToggleTheme = () => {
   return (
     <Wrapper onClick={ToggleTheme}>
       {theme === 'light' ? (
-        <img src="/assets/icons/moon.svg" />
+        <Image
+          src="/assets/icons/moon.svg"
+          width="24"
+          height="24"
+          layout="fixed"
+          alt="moon"
+        />
       ) : (
-        <img src="/assets/icons/sun.svg" />
+        <Image
+          src="/assets/icons/sun.svg"
+          width="24"
+          height="24"
+          layout="fixed"
+          alt="sun"
+        />
       )}
     </Wrapper>
   );

@@ -1,9 +1,16 @@
-import { Wrapper} from './styles';
+import { Wrapper } from './styles';
 
-const MenuItem = ({text}) => {
+const MenuItem = ({ text, target, open, setOpen }) => {
   return (
     <Wrapper>
-      <a href="/">{text}</a>
+      <a
+        href={target}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      >
+        {text}
+      </a>
     </Wrapper>
   );
 };

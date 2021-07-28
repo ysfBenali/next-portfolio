@@ -8,12 +8,32 @@ const SideBar = ({ open, setOpen }) => {
 
   return (
     <>
-      <Backdrop open={open} onClick={() => {setOpen(!open)}}/>
+      <Backdrop
+        open={open}
+        onClick={() => {
+          setOpen(!open);
+        }}
+      />
       <Wrapper open={open}>
         <Top theme={theme}>
-          <MenuItem text={'About'}/>
-          <MenuItem  text={'Projects'} />
-          <MenuItem  text={'Contact'}/>
+          <MenuItem
+            text={'About'}
+            target={'#about'}
+            setOpen={setOpen}
+            open={open}
+          />
+          <MenuItem
+            text={'Projects'}
+            target={'#projects'}
+            setOpen={setOpen}
+            open={open}
+          />
+          <MenuItem
+            text={'Contact'}
+            target={'#contact'}
+            setOpen={setOpen}
+            open={open}
+          />
         </Top>
         <Bottom>
           <ToggleTheme />
