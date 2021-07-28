@@ -1,13 +1,25 @@
 import Container from '@/components/common/Container';
-import { Wrapper } from './styles';
+import Image from 'next/image';
+import { Wrapper, Details, SvgContainer } from './styles';
+import ContactForm from './ContactForm';
 
 const Contact = () => {
   return (
-    <Wrapper as={Container}>
-      Contact lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, exercitationem. Fugit tempore nemo sequi? Cupiditate rerum in at veniam sint, aliquid aspernatur iusto nisi ex voluptatum temporibus, reiciendis dignissimos placeat.
-   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex sed deleniti quisquam neque harum sequi culpa sapiente eligendi. Eius alias a ab modi quod voluptatum qui esse fugiat ratione officia?
+    <Wrapper as={Container} id="contact">
+      <Details>
+        <ContactForm />
+      </Details>
+      <SvgContainer>
+        <Image
+          src="/assets/contact.svg"
+          width={500}
+          height={450}
+          alt="Contact Picture"
+          layout="responsive"
+        />
+      </SvgContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
 export default Contact;
