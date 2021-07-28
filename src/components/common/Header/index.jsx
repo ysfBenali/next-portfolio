@@ -1,18 +1,51 @@
 import Burger from './Burger';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
-import { DesktopSpacer, HeroWrapper, SvgWrapper } from './styles';
+import {
+  Avatar,
+  DesktopSpacer,
+  Details,
+  HeroWrapper,
+  IntroWrapper,
+  SvgWrapper,
+  Hero,
+  StyledImage,
+} from './styles';
 import Responsive from '../Responsive';
 import { useTheme } from 'providers/ThemeProvider';
+import Container from '../Container';
+import Button from '../Button';
 
 const Header = ({ open, setOpen }) => {
   const theme = useTheme();
 
   return (
     <>
+      <DesktopSpacer />
+      <NavBar />
       <HeroWrapper open={open}>
-        <DesktopSpacer />
-        <NavBar />
+        <IntroWrapper as={Container}>
+          <Details>
+            <h1>👋 Hello, I'm Youssef !</h1>
+          
+            <h2>
+              A Full Stack Developer from Morocco, i've been creating on the web
+              for around 2 years. I'm in love with React and Node, and super
+              passionate about turning new ideas to real products.
+            </h2>
+            <a href="#contact">
+              <Button>Hire Me</Button>
+            </a>
+          </Details>
+          <Avatar>
+            <StyledImage
+              src="/avatar.jpg"
+              width={180}
+              height={180}
+              alt="My Picture"
+            />
+          </Avatar>
+        </IntroWrapper>
         <SvgWrapper theme={theme}>
           <svg
             preserveAspectRatio="none"
