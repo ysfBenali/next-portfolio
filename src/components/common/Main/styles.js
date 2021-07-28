@@ -5,7 +5,7 @@ export const Wrapper = styled.main`
   z-index: ${Z_INDICES.mainContent};
   flex: 1;
   margin-top: -1px;
-  padding-top: 64px;
+  padding-top: 5px;
   padding-bottom: 32px;
   background-color: var(--color-background);
 `;
