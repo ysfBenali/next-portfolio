@@ -16,4 +16,12 @@ export const Wrapper = styled.div`
         display: none;
       }
     `}
+    ${({ breakpointOnly }) =>
+    breakpointOnly &&
+    css`
+      @media ${BREAKPOINTS[breakpointOnly]} {
+        display: none;
+      }
+    `}
+    
 `;
