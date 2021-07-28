@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   padding-bottom: 32px;
   padding-top: 32px;
   @media ${BREAKPOINTS.mdMin} {
-    min-height: 85vh;
+    /* min-height: 85vh; */
   }
 `;
 

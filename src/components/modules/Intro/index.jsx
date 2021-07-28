@@ -34,9 +34,8 @@ const Intro = () => {
         <span> +212606618093 </span>.
       </p>
       <p>
-        Feel free to reach out to me for speaking inquiries, or if you have
-        questions or comments just email me at
-        <a href="mailto:hello@ysfbenali.com"> hello@ysfbenali.com </a> .
+        Feel free to reach out to me if you have any questions or comments just email me at
+        <a href="mailto:ysfbenali.dev@gmail.com"> ysfbenali.dev@gmail.com </a> .
       </p>
     </Wrapper>
   );

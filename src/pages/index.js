@@ -1,10 +1,12 @@
 import Layout from '@/components/common/Layout';
 import Main from '@/components/common/Main';
+import SEO from '@/components/common/SEO';
 import axios from 'axios';
 
 const Home = ({ repos }) => {
   return (
     <Layout>
+      <SEO />
       <Main data={repos} />
     </Layout>
   );

@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
+import { DefaultSeo } from 'next-seo';
 import ThemeProvider from '../providers/ThemeProvider';
+import SEO from '@/components/seo/next-seo.config';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false);
@@ -8,10 +11,37 @@ function MyApp({ Component, pageProps }) {
     setIsMounted(true);
   }, []);
 
-  if (!isMounted) return null;
+  if (!isMounted)
+    return (
+      <DefaultSeo
+        {...SEO}
+        additionalMetaTags={[
+          {
+            property: 'og:type',
+            content: 'website',
+          },
+        ]}
+      />
+    );
 
   return (
-    <ThemeProvider><Component {...pageProps} /></ThemeProvider>
+    <>
+      <Head>
+        <title>Youssef BenAli</title>
+      </Head>
+      <ThemeProvider>
+        <DefaultSeo
+          {...SEO}
+          additionalMetaTags={[
+            {
+              property: 'og:type',
+              content: 'website',
+            },
+          ]}
+        />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 }
 
