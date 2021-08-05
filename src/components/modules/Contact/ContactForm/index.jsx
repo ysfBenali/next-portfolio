@@ -72,6 +72,7 @@ const ContactForm = () => {
         errors,
         touched,
         isSubmitting,
+        setFieldValue,
       }) => (
         <Form>
           <InputWrapper>
@@ -156,6 +157,7 @@ const ContactForm = () => {
                   component={Recaptcha}
                   sitekey={process.env.NEXT_PUBLIC_CAPTCHA_KEY}
                   name="recaptcha"
+                  onChange={(value) => setFieldValue('recaptcha', value)}
                 />
                 <ErrorMessage name="recaptcha" component={Error} />
               </InputWrapper>
