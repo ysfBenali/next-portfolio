@@ -1,5 +1,5 @@
 export default {
-  title: 'Youssef BenAli | Hello word !',
+  title: 'Youssef BenAli | Hello world !',
   description: "I am Youssef BenAli, a full stack developer, super curious and spends a lot of time building software.",
   openGraph: {
     type: 'website',
