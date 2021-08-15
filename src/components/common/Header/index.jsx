@@ -27,11 +27,10 @@ const Header = ({ open, setOpen }) => {
         <IntroWrapper as={Container}>
           <Details>
             <h1>👋 Hello, I'm Youssef !</h1>
-          
             <h2>
-              A Full Stack Developer from Morocco, i've been creating on the web
-              for around 2 years. I'm in love with React and Node, and super
-              passionate about turning new ideas to real products.
+                A Full Stack Developer from Morocco 🇲🇦. I've been creating on the web
+              for around 2 years, mainly React and Node. I’m passionate about
+              turning bright, creative ideas into high quality software.
             </h2>
             <a href="#contact">
               <Button>Hire Me</Button>

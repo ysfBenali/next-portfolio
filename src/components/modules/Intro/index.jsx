@@ -6,12 +6,13 @@ const Intro = () => {
     <Wrapper as={Container} id="about">
       <h3>More about me</h3>
       <p>
-        I’m just a super curious guy who spends a lot of time building software.
-        Currently working as a software engineer. I am mostly self-taught, and I
-        am very passionate about new technologies. My strongest skills lie
-        within React/JavaScript.
+        I’m a super curious guy who enjoys the process of learning new things.
+        Currently working as a software engineer. I like writing code especially
+        in Javascript and React. Fast learner and obsessed with details and
+        quality, I am mostly self-taught, and always keeping up with new
+        technologies.
       </p>
-      <p>I primarily use the following technologies, tools and libraries:</p>
+      <p>I primarily use the following frameworks, tools, and libraries :</p>
       <Tech>
         <ul>
           <li>JavaScript</li>
@@ -24,18 +25,17 @@ const Intro = () => {
           <li>GraphQL</li>
         </ul>
       </Tech>
-
       <p>
-        So I'm locking for opportunity to develop my skills , team oriented and
-        a happy workplace, If you are interested in hiring a Front-end developer
-        (Next/React), you are in the right place.
+        So I'm looking for an opportunity to develop my skills, be
+        team-oriented, and have a happy workplace, If you are interested in
+        hiring a Front-end developer (React/Next), you are in the right place .
         <a href="#contact"> Get in touch </a>
         to discuss, or you can call me at this number
-        <span> +212606618093 </span>.
+        <span> +212606618093</span>.
       </p>
       <p>
-        Feel free to reach out to me if you have any questions or comments just email me at
-        <a href="mailto:ysfbenali.dev@gmail.com"> ysfbenali.dev@gmail.com </a> .
+        If you have any questions or comments feel free to email me at
+        <a href="mailto:ysfbenali.dev@gmail.com"> ysfbenali.dev@gmail.com</a>.
       </p>
     </Wrapper>
   );
