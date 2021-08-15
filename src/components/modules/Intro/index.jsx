@@ -31,7 +31,7 @@ const Intro = () => {
         hiring a Front-end developer (React/Next), you are in the right place .
         <a href="#contact"> Get in touch </a>
         to discuss, or you can call me at this number
-        <span> +212606618093</span>.
+        <span> +212603618093</span>.
       </p>
       <p>
         If you have any questions or comments feel free to email me at
