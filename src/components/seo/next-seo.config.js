@@ -1,6 +1,6 @@
 export default {
   title: 'Youssef BenAli | Hello world !',
-  description: "I am Youssef BenAli, a full stack developer, super curious and spends a lot of time building software.",
+  description: "I'm Youssef BenAli. I like writing code. Especially in Javascript and React. Currently working as a Full Stack Web Developer.",
   openGraph: {
     type: 'website',
     locale: 'en_US',

@@ -9,7 +9,7 @@ const url =
 const SEO = ({
   location = url,
   title = 'Youssef BenAli | Hello world !',
-  description = "I'm Youssef BenAli, a full stack developer, super curious and spends a lot of time building software.",
+  description = "I'm Youssef BenAli. I like writing code. Especially in Javascript and React. Currently working as a Full Stack Web Developer.",
 }) => (
   <NextSeo
     title={title}
