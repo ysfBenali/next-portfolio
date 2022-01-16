@@ -8,7 +8,6 @@ import {
   HeroWrapper,
   IntroWrapper,
   SvgWrapper,
-  Hero,
   StyledImage,
 } from './styles';
 import Responsive from '../Responsive';
@@ -28,9 +27,9 @@ const Header = ({ open, setOpen }) => {
           <Details>
             <h1>👋 Hello, I'm Youssef !</h1>
             <h2>
-                A Full Stack Developer from Morocco 🇲🇦. I've been creating on the web
-              for around 2 years, mainly React and Node. I’m passionate about
-              turning bright, creative ideas into high quality software.
+              A Full Stack Developer from Morocco 🇲🇦. I've been creating on the
+              web for around 2 years, mainly React and Node. I’m passionate
+              about turning bright, creative ideas into high quality software.
             </h2>
             <a href="#contact">
               <Button>Hire Me</Button>

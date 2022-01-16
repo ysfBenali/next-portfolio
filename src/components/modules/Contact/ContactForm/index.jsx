@@ -65,9 +65,7 @@ const ContactForm = () => {
       onSubmit={handleSubmitForm}
     >
       {({
-        handleSubmit,
         handleChange,
-        handleBlur,
         values,
         errors,
         touched,
@@ -117,7 +115,7 @@ const ContactForm = () => {
           <InputWrapper>
             <Input
               id="reason"
-              as={FastField}
+              // as={FastField}
               name="reason"
               as="select"
               value={values.reason}
