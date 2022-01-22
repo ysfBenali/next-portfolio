@@ -82,6 +82,13 @@ export const Avatar = styled.div`
   }
 `;
 
+export const ImgContainer = styled.div`
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+`;
+
 export const StyledImage = styled(Image)`
   border-radius: 90px;
   border: 4px solid var(--color-text) !important;

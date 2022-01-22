@@ -9,11 +9,13 @@ import {
   IntroWrapper,
   SvgWrapper,
   StyledImage,
+  ImgContainer,
 } from './styles';
 import Responsive from '../Responsive';
 import { useTheme } from 'providers/ThemeProvider';
 import Container from '../Container';
 import Button from '../Button';
+import avatar from '/public/avatar.jpg';
 
 const Header = ({ open, setOpen }) => {
   const theme = useTheme();
@@ -36,12 +38,18 @@ const Header = ({ open, setOpen }) => {
             </a>
           </Details>
           <Avatar>
-            <StyledImage
-              src="/avatar.jpg"
-              width={180}
-              height={180}
-              alt="My Picture"
-            />
+            <ImgContainer>
+              <StyledImage
+                alt="My Picture"
+                src={avatar}
+                layout="fixed"
+                width={150}
+                height={150}
+                priority={true}
+                placeholder="blur"
+                quality={90}
+              />
+            </ImgContainer>
           </Avatar>
         </IntroWrapper>
         <SvgWrapper theme={theme}>
