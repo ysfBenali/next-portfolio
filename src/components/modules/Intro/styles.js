@@ -2,11 +2,8 @@ import styled from 'styled-components';
 import { BREAKPOINTS } from 'constants/';
 
 export const Wrapper = styled.div`
-  /* position:relative; */
   text-align: left;
   min-height: 100px;
-  /* padding-top:32px; */
-  /* padding-bottom:64px; */
   padding-bottom: 32px;
   padding-top: 32px;
   font-weight: 500;
@@ -29,9 +26,6 @@ export const Tech = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 15px;
-    /* height: 100px; */
-    /* padding: 0;
-  margin: 0 auto; */
   }
   ul li {
     padding-bottom: 15px;

@@ -20,10 +20,6 @@ export const Wrapper = styled.div`
   }
 `;
 export const NavContainer = styled.div`
-  /* z-index: ${Z_INDICES.navBar};
-  position: sticky;
-  transform: translateZ(0);
-  top: 0px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -31,13 +27,6 @@ export const NavContainer = styled.div`
   padding-bottom: 0.8rem;
   font-weight: 600;
   font-size: 16px;
-  /* margin-bottom: 2rem; */
-  //new
-  /* background:  ${({ colorChange }) =>
-    colorChange ? 'var(--color-blurred-background)' : ''};
-  transition: 0.5s all ease;
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px); */
 `;
 
 export const HeaderLeft = styled.div`
@@ -53,10 +42,6 @@ export const Brand = styled.a`
   color: var(----color-text);
   text-decoration: none;
   color: var(--color-primary);
-
-  /* opacity: 1;
-  transition: opacity 250ms ease-out 0s, margin 250ms ease-in-out 0s; */
-  /* transition: margin 250ms ease-in-out 0s; */
 `;
 
 export const HeaderRight = styled.div`

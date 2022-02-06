@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS,Z_INDICES } from 'constants/';
+import { BREAKPOINTS, Z_INDICES } from 'constants/';
 
 export const Wrapper = styled.nav`
   z-index: ${Z_INDICES.sideBar};
@@ -43,7 +43,6 @@ export const Backdrop = styled.button`
   height: 100vh;
   border: none;
   background: var(--color-blurred-background);
-  /* cursor: pointer; */
   backdrop-filter: ${({ open }) => (open ? 'blur(8px)' : 'blur(0)')};
   filter: ${({ open }) => (open ? 'blur(8px)' : 'blur(0)')};
 `;

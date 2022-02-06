@@ -125,11 +125,6 @@ export const Links = styled.div`
   a {
     cursor: pointer;
   }
-  /* img {
-    padding: 5px;
-    height: 35px;
-    filter: var(--social-svg-fill-color);
-  } */
 
   @media ${BREAKPOINTS.sm} {
     text-align: center;
@@ -137,6 +132,6 @@ export const Links = styled.div`
 `;
 
 export const SocialImage = styled(Image)`
-  padding: 5px!important;
+  padding: 5px !important;
   filter: var(--social-svg-fill-color);
 `;

@@ -38,12 +38,9 @@ const GlobalStyle = createGlobalStyle`
     --scrollbarBG: white;
     --thumbBG: var(--color-gray-400);
 
-    --color-subtle-background: #F5F9FF;//#FAFAFA;//#f3f8ff;
-    /* --color-primary: #293EDB;//#4B60E7;//#5773ff; */ //old
-    /* --color-primary:#4262FF;//new */
+    --color-subtle-background: #F5F9FF;
     --color-primary:#4D61FF;
-    //light #4262FF
-    //dark #6B84FF
+    
     --color-secondary: #ff0a78;
     --color-error: #fa3879;
     

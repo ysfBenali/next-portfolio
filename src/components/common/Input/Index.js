@@ -12,18 +12,7 @@ export const Input = styled.input`
   option {
     background-color: var(--color-background);
   }
-  ${({ error }) =>
-    error && `border-color: var(--color-error)`
-    }
-    
-    
-    /* background: transparent;
-    border: none;
-    font-size: 16px;
-    padding: 8px 0px 12px;
-    color: var(--color-text);
-    outline: none;
-    width: 100%; */
+  ${({ error }) => error && `border-color: var(--color-error)`}
 `;
 
 export default Input;

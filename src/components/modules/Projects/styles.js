@@ -2,14 +2,10 @@ import styled from 'styled-components';
 import { BREAKPOINTS } from 'constants/';
 
 export const Wrapper = styled.div`
-  /* position:relative; */
   text-align: left;
   min-height: 100px;
   padding-bottom: 32px;
   padding-top: 32px;
-  @media ${BREAKPOINTS.mdMin} {
-    /* min-height: 85vh; */
-  }
 `;
 
 export const Grid = styled.div`
@@ -47,7 +43,6 @@ export const Item = styled.div`
 export const Card = styled.div`
   padding: 1rem;
   height: 100%;
-  /* background-color: var(--color-homepage-dark); */
   background-color: ${({ theme }) =>
     theme === 'light'
       ? 'var(--color-subtle-background)'
@@ -58,7 +53,6 @@ export const Description = styled.div`
   padding: 0.2rem 0;
   text-align: left;
   min-height: 140px;
-
   h4 {
     color: var(--color-primary);
   }

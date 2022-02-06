@@ -8,12 +8,7 @@ export const HeroWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* justify-content: space-around; */
-
-  /* background-color:red; */
-  /* z-index: ${Z_INDICES.hero}; */
   min-height: 450px;
-  //new
   padding-bottom: 100px;
 `;
 
@@ -43,34 +38,10 @@ export const IntroWrapper = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  /* left: 50%; */
-  /* padding-top: 4rem;
-  padding-bottom: 4rem; */
-  /* width: 100%; */
-  /* margin: 0 auto; */
-
-  /* max-height: 130px; */
   @media ${BREAKPOINTS.md} {
     flex-direction: column-reverse;
     padding-bottom: 1.2rem;
   }
-  /* flex-direction: column; */
-  /* position: relative;
-display: block;
-align-items: center;
-  justify-content: center; */
-  /* flex-flow: row wrap-reverse; */
-  /* position: fixed;
-align-self: center; */
-
-  /* position: fixed;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width:100%;
-  align-items: center;
-  justify-content: center; */
 `;
 
 export const Avatar = styled.div`
