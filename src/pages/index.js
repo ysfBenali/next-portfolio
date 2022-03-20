@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
       query: `
       query viewer {
         viewer {
-          repositoriesContributedTo(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, privacy: PUBLIC, includeUserRepositories: true, contributionTypes: [COMMIT, ISSUE, PULL_REQUEST]) {
+          repositories(first: 8, orderBy: {field: STARGAZERS, direction: DESC}, isFork: false) {
             edges {
               node {
                 id
@@ -55,7 +55,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      repos: data.viewer.repositoriesContributedTo.edges,
+      repos: data.viewer.repositories.edges,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
