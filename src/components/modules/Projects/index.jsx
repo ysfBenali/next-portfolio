@@ -24,30 +24,30 @@ const Projects = ({ repos }) => {
             if (!node) return null;
             return (
               <Item
-                key={node.id}
+                key={node?.id}
                 as="a"
-                href={node.url}
+                href={node?.url}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Card theme={theme}>
                   <Description>
-                    <h4>{node.name}</h4>
-                    <p>{node.description}</p>
+                    <h4>{node?.name}</h4>
+                    <p>{node?.description}</p>
                   </Description>
                   <Stats>
                     <Content>
                       <div>
-                        <Language color={node.primaryLanguage.color} />
-                        <span>{node.primaryLanguage.name}</span>
+                        <Language color={node?.primaryLanguage?.color} />
+                        <span>{node?.primaryLanguage?.name}</span>
                       </div>
                       <div>
                         <Star />
-                        <span>{node.stargazers.totalCount}</span>
+                        <span>{node?.stargazers?.totalCount}</span>
                       </div>
                       <div>
                         <Fork />
-                        <span>{node.forkCount}</span>
+                        <span>{node?.forkCount}</span>
                       </div>
                     </Content>
                   </Stats>
