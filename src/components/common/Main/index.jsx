@@ -1,3 +1,5 @@
+'use client';
+
 import Intro from '@/components/modules/Intro';
 import Projects from '@/components/modules/Projects';
 import Contact from '@/components/modules/Contact';
@@ -6,10 +8,11 @@ import { Wrapper } from './styles';
 
 const Main = ({ data }) => {
   const theme = useTheme();
+
   return (
     <Wrapper theme={theme}>
       <Intro />
-      <Projects repos={data}/>
+      <Projects repos={data} />
       <Contact />
     </Wrapper>
   );

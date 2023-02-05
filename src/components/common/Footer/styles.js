@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS, Z_INDICES } from 'constants/';
-import Image from 'next/image';
+import { BREAKPOINTS, Z_INDICES } from '../../../constants';
 
 export const Wrapper = styled.div`
   z-index: ${Z_INDICES.footer};
@@ -28,9 +27,8 @@ export const Left = styled.div`
   }
 `;
 
-export const ExternalLink = styled.a`
+export const Home = styled.span`
   display: flex;
-  cursor: pointer;
   color: var(--color-primary);
   font-size: 21px;
   font-weight: 600;
@@ -129,9 +127,4 @@ export const Links = styled.div`
   @media ${BREAKPOINTS.sm} {
     text-align: center;
   }
-`;
-
-export const SocialImage = styled(Image)`
-  padding: 5px !important;
-  filter: var(--social-svg-fill-color);
 `;

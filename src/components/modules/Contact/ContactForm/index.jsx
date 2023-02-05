@@ -1,9 +1,11 @@
+'use client';
+
+import * as Yup from 'yup';
+import axios from 'axios';
+import Recaptcha from 'react-google-recaptcha';
+import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import Button from '@/components/common/Button';
 import Input from '@/components/common/Input/Index';
-import axios from 'axios';
-import { Formik, Form, FastField, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-import Recaptcha from 'react-google-recaptcha';
 import { Error, InputWrapper } from './styles';
 
 const ContactForm = () => {

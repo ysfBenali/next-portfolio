@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS } from 'constants/';
+import { BREAKPOINTS } from '../../../constants';
 
 export const Wrapper = styled.div`
   text-align: left;

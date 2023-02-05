@@ -1,5 +1,5 @@
-import { BREAKPOINTS } from 'constants/';
 import styled from 'styled-components';
+import { BREAKPOINTS } from '../../../constants';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -22,13 +22,12 @@ export const Details = styled.div`
     padding: 0;
   }
 `;
+
 export const SvgContainer = styled.div`
   flex: 1;
-  img {
-    height: 100%;
-  }
+  align-self: center;
   @media ${BREAKPOINTS.md} {
     width: 100%;
-    padding-top: 0;
+    padding: 16px 0 16px 0;
   }
 `;

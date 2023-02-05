@@ -1,6 +1,15 @@
+'use client';
+
+import Image from 'next/image';
+import { useTheme } from 'providers/ThemeProvider';
+import avatar from '/public/avatar.jpg';
 import Burger from './Burger';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
+import Responsive from '../Responsive';
+import Container from '../Container';
+import Button from '../Button';
+import Link from '../Link';
 import {
   Avatar,
   DesktopSpacer,
@@ -8,16 +17,9 @@ import {
   HeroWrapper,
   IntroWrapper,
   SvgWrapper,
-  StyledImage,
-  ImgContainer,
 } from './styles';
-import Responsive from '../Responsive';
-import { useTheme } from 'providers/ThemeProvider';
-import Container from '../Container';
-import Button from '../Button';
-import avatar from '/public/avatar.jpg';
 
-const Header = ({ open, setOpen }) => {
+const Header = ({ open, onOpen }) => {
   const theme = useTheme();
 
   return (
@@ -33,23 +35,24 @@ const Header = ({ open, setOpen }) => {
               web for around 2 years, mainly React and Node. I’m passionate
               about turning bright, creative ideas into high quality software.
             </h2>
-            <a href="#contact">
+            <Link href="/#contact">
               <Button>Hire Me</Button>
-            </a>
+            </Link>
           </Details>
           <Avatar>
-            <ImgContainer>
-              <StyledImage
-                alt="My Picture"
-                src={avatar}
-                layout="fixed"
-                width={150}
-                height={150}
-                priority={true}
-                placeholder="blur"
-                quality={90}
-              />
-            </ImgContainer>
+            <Image
+              alt="My Picture"
+              src={avatar}
+              width={150}
+              height={150}
+              priority={true}
+              placeholder="blur"
+              quality={90}
+              style={{
+                borderRadius: '90px',
+                border: '4px solid var(--color-text)',
+              }}
+            />
           </Avatar>
         </IntroWrapper>
         <SvgWrapper theme={theme}>
@@ -64,9 +67,9 @@ const Header = ({ open, setOpen }) => {
         </SvgWrapper>
       </HeroWrapper>
       <Responsive mobileOnly>
-        <Burger open={open} setOpen={setOpen} />
+        <Burger open={open} onOpen={onOpen} />
       </Responsive>
-      <SideBar open={open} setOpen={setOpen} />
+      <SideBar open={open} onOpen={onOpen} />
     </>
   );
 };

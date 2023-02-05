@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS, Z_INDICES } from 'constants/';
-import Image from 'next/image';
+import { BREAKPOINTS, Z_INDICES } from '../../../constants';
 
 export const HeroWrapper = styled.div`
   position: relative;
@@ -48,22 +47,13 @@ export const Avatar = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
+  overflow: hidden;
   @media ${BREAKPOINTS.md} {
     padding-bottom: 0.8rem;
   }
+  background-color: 'red';
 `;
 
-export const ImgContainer = styled.div`
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  border-radius: 50%;
-`;
-
-export const StyledImage = styled(Image)`
-  border-radius: 90px;
-  border: 4px solid var(--color-text) !important;
-`;
 export const Details = styled.div`
   flex: 2;
   text-align: left;

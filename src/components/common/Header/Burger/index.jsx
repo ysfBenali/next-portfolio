@@ -1,10 +1,17 @@
+'use client';
+
 import { useTheme } from 'providers/ThemeProvider';
 import { Wrapper } from './styles';
 
-const Burger = ({ open,setOpen }) => {
+const Burger = ({ open, onOpen }) => {
   const theme = useTheme();
   return (
-    <Wrapper aria-label="ToggleModal" onClick={() => setOpen(!open)} theme={theme} open={open}>
+    <Wrapper
+      theme={theme}
+      open={open}
+      aria-label="ToggleModal"
+      onClick={() => onOpen(!open)}
+    >
       <div />
       <div />
     </Wrapper>

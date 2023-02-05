@@ -1,20 +1,22 @@
+'use client ';
+
+import Image from 'next/image';
 import { useTheme } from 'providers/ThemeProvider';
-import Link from 'next/link';
+import Link from '../Link';
 import Container from '../Container';
 import Responsive from '../Responsive';
-import social from './social.json';
 import {
   Wrapper,
   Left,
   Right,
   Top,
-  ExternalLink,
+  Home,
   Thanks,
   Copyright,
   Links,
   Column,
-  SocialImage,
 } from './styles';
+import social from './social.json';
 
 const Footer = () => {
   const theme = useTheme();
@@ -24,8 +26,8 @@ const Footer = () => {
       <Wrapper as={Container}>
         <Left>
           <Top>
-            <Link href="/" passHref>
-              <ExternalLink>Youssef BenAli</ExternalLink>
+            <Link href="/#" scroll={false}>
+              <Home>Youssef BenAli</Home>
             </Link>
             <Responsive breakpointOnly="sm">
               <Thanks>Welcome to my personal website !</Thanks>
@@ -40,9 +42,15 @@ const Footer = () => {
         <Right>
           <Column>
             <span>Links</span>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <Link href="/#about" scroll={false}>
+              About
+            </Link>
+            <Link href="/#projects" scroll={false}>
+              Projects
+            </Link>
+            <Link href="/#contact" scroll={false}>
+              Contact
+            </Link>
           </Column>
           <Column>
             <Responsive breakpointOnly="sm">
@@ -58,12 +66,15 @@ const Footer = () => {
                       title={name}
                       rel="noopener noreferrer"
                     >
-                      <SocialImage
+                      <Image
                         src={icon}
-                        layout="fixed"
                         width="38"
                         height="38"
                         alt={name}
+                        style={{
+                          padding: '5px',
+                          filter: 'var(--social-svg-fill-color)',
+                        }}
                       />
                     </a>
                   </li>

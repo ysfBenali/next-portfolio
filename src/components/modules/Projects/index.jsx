@@ -1,8 +1,10 @@
+'use client';
+
+import { useTheme } from 'providers/ThemeProvider';
 import Container from '@/components/common/Container';
 import Fork from '@/components/common/Icons/Fork';
 import Language from '@/components/common/Icons/Language';
 import Star from '@/components/common/Icons/Star';
-import { useTheme } from 'providers/ThemeProvider';
 import {
   Card,
   Description,
@@ -15,6 +17,7 @@ import {
 
 const Projects = ({ repos }) => {
   const theme = useTheme();
+
   return (
     <Wrapper as={Container} id="projects">
       <h3>Popular Projects</h3>

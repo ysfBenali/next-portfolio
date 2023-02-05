@@ -1,7 +1,7 @@
-import Container from '@/components/common/Container';
 import Image from 'next/image';
-import { Wrapper, Details, SvgContainer } from './styles';
+import Container from '@/components/common/Container';
 import ContactForm from './ContactForm';
+import { Wrapper, Details, SvgContainer } from './styles';
 
 const Contact = () => {
   return (
@@ -15,7 +15,11 @@ const Contact = () => {
           width={500}
           height={450}
           alt="Contact Picture"
-          layout="responsive"
+          sizes="100vh"
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
         />
       </SvgContainer>
     </Wrapper>

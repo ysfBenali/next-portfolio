@@ -1,5 +1,7 @@
-import { useState } from 'react';
-import Link from 'next/link';
+'use client';
+
+import { useEffect, useState } from 'react';
+import Link from '../../Link';
 import Container from '../../Container';
 import Responsive from '../../Responsive';
 import ToggleTheme from '../ToggleTheme';
@@ -11,12 +13,12 @@ import {
   Menu,
   MenuItem,
   HeaderRight,
-  MenuItemWrapper,
   RightIconWrapper,
 } from './styles';
 
 const NavBar = () => {
   const [changeDesign, setChangeDesign] = useState(false);
+
   const changeNavbarColor = () => {
     if (window.scrollY >= 60) {
       setChangeDesign(true);
@@ -24,26 +26,32 @@ const NavBar = () => {
       setChangeDesign(false);
     }
   };
-  window.addEventListener('scroll', changeNavbarColor);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', changeNavbarColor);
+    }
+    return () => window.removeEventListener('scroll', changeNavbarColor);
+  }, []);
 
   return (
     <Wrapper changeDesign={changeDesign}>
       <NavContainer as={Container}>
         <HeaderLeft>
-          <Link href="/" passHref>
+          <Link href="/" scroll={false}>
             <Brand>{changeDesign ? '<ysfBenAli />' : 'Youssef BenAli'}</Brand>
           </Link>
           <Responsive desktopOnly>
             <Menu>
-              <MenuItemWrapper>
-                <MenuItem href="#about">About</MenuItem>
-              </MenuItemWrapper>
-              <MenuItemWrapper>
-                <MenuItem href="#projects">Projects</MenuItem>
-              </MenuItemWrapper>
-              <MenuItemWrapper>
-                <MenuItem href="#contact">Contact</MenuItem>
-              </MenuItemWrapper>
+              <Link href="/#about" scroll={false}>
+                <MenuItem>About</MenuItem>
+              </Link>
+              <Link href="/#projects" scroll={false}>
+                <MenuItem>Projects </MenuItem>
+              </Link>
+              <Link href="/#contact" scroll={false}>
+                <MenuItem>Contact</MenuItem>
+              </Link>
             </Menu>
           </Responsive>
         </HeaderLeft>
