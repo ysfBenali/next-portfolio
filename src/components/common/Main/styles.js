@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Z_INDICES } from 'constants/';
+import { Z_INDICES } from '../../../constants';
 
 export const Wrapper = styled.main`
   z-index: ${Z_INDICES.mainContent};

@@ -1,4 +1,4 @@
-export default {
+const NEXT_SEO_DEFAULT = {
   title: 'Youssef BenAli | Hello world !',
   description:
     "I'm Youssef BenAli. I like writing code. Especially in Javascript and React. Currently working as a Full Stack Web Developer.",
@@ -6,7 +6,7 @@ export default {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.ysfbenali.com/',
-    site_name: 'ysfBenAli',
+    siteName: 'ysfBenAli',
     images: [
       {
         url: 'https://www.ysfbenali.com/assets/thumbnail/thumbnail.png',
@@ -22,3 +22,5 @@ export default {
     cardType: 'summary_large_image',
   },
 };
+
+export default NEXT_SEO_DEFAULT;

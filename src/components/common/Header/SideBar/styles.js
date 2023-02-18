@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS, Z_INDICES } from 'constants/';
+import { BREAKPOINTS, Z_INDICES } from '../../../../constants';
 
 export const Wrapper = styled.nav`
   z-index: ${Z_INDICES.sideBar};
@@ -28,9 +28,6 @@ export const Bottom = styled.div`
   display: flex;
   width: 100%;
   text-align: left;
-  * {
-    padding: 0.8rem 0;
-  }
 `;
 
 export const Backdrop = styled.button`

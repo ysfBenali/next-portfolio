@@ -24,13 +24,16 @@ const useDarkMode = () => {
   };
 
   useEffect(() => {
+    const root = document.documentElement;
     const localTheme = window.localStorage.getItem('theme');
 
     if (localTheme) {
       setTheme(localTheme);
     } else if (prefersDarkMode) {
+      root.setAttribute('data-theme', 'dark');
       setTheme('dark');
     } else {
+      root.setAttribute('data-theme', 'light');
       setTheme('light');
     }
   }, [prefersDarkMode]);

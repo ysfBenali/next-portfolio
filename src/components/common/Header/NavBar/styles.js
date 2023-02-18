@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BREAKPOINTS, Z_INDICES } from 'constants/';
+import { BREAKPOINTS, Z_INDICES } from '../../../../constants';
 
 export const Wrapper = styled.div`
   z-index: ${Z_INDICES.navBar};
@@ -34,12 +34,11 @@ export const HeaderLeft = styled.div`
   align-items: baseline;
 `;
 
-export const Brand = styled.a`
+export const Brand = styled.div`
   cursor: pointer;
   font-size: 21px;
   margin-right: 2rem;
   white-space: nowrap;
-  color: var(----color-text);
   text-decoration: none;
   color: var(--color-primary);
 `;
@@ -55,18 +54,13 @@ export const Menu = styled.div`
   justify-content: space-between;
 `;
 
-export const MenuItemWrapper = styled.span`
+export const MenuItem = styled.span`
+  color: var(--color-text);
+  font-size: 17px;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-`;
-
-export const MenuItem = styled.a`
-  cursor: pointer;
-  color: var(----color-text);
-  text-decoration: none;
-  font-size: 17px;
 `;
 
 export const RightIconWrapper = styled.div`

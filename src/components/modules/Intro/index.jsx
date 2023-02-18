@@ -1,4 +1,5 @@
 import Container from '@/components/common/Container';
+import Link from '@/components/common/Link';
 import { Wrapper, Tech } from './styles';
 
 const Intro = () => {
@@ -29,7 +30,10 @@ const Intro = () => {
         So I'm looking for an opportunity to develop my skills, be
         team-oriented, and have a happy workplace, If you are interested in
         hiring a Front-end developer (React/Next), you are in the right place .
-        <a href="#contact"> Get in touch </a>
+        <Link href="/#contact" scroll={false}>
+          {' '}
+          Get in touch{' '}
+        </Link>
         to discuss, or you can call me at this number
         <span> +212603618093</span>.
       </p>

@@ -1,16 +1,19 @@
+'use client';
+
+import Link from '@/components/common/Link';
 import { Wrapper } from './styles';
 
-const MenuItem = ({ text, target, open, setOpen }) => {
+const MenuItem = ({ text, target, open, onOpen }) => {
   return (
     <Wrapper>
-      <a
+      <Link
         href={target}
         onClick={() => {
-          setOpen(!open);
+          onOpen(!open);
         }}
       >
         {text}
-      </a>
+      </Link>
     </Wrapper>
   );
 };
