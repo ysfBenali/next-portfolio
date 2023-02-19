@@ -64,16 +64,21 @@ A quick look at the top-level files and directories :
 │   │   ├── icons			# Icons
 │   │   └── thumbnail			# Cover of your website when it's shared to social media
 ├── src
+│   ├── app				# AppDir 
+│   │   ├── head.jsx
+│   │   ├── layout.jsx
+│   │   └── page.jsx
 │   ├── components			# Components
 │   │   ├── common				
 │   │   │   ├── ...			# Common components
 │   │   │   ├── GlobalStyles.jsx	# Contains all your global styles
-│   │   ├── modules
-│   │   └── seo
-│   │       └── next-seo.config.js	# Default SEO related tags
+│   │   └── modules
+│   ├──config
+│   │   └── next-seo.config.js	        # Default SEO related tags
 │   ├── constants 			# Contains Global `BREAKPOINTS` and `Z_INDICES` constants
 │   ├── hooks				# Custom hooks 
-│   ├── pages				# Pages
+│   ├── pages				
+│   │   └── api			        # APIs
 │   └── providers
 │       └── ThemeProvider.jsx   	# Theme Provider
 └── yarn.lock
