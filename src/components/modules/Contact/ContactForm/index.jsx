@@ -1,7 +1,6 @@
 'use client';
 
 import * as Yup from 'yup';
-import axios from 'axios';
 import Recaptcha from 'react-google-recaptcha';
 import { Formik, Form, FastField, ErrorMessage } from 'formik';
 import Button from '@/components/common/Button';
@@ -29,17 +28,20 @@ const ContactForm = () => {
   ) => {
     try {
       console.log('api call');
-      await axios({
-        url:
-          process.env.NODE_ENV !== 'development'
-            ? `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/api/contact`
-            : 'http://localhost:3000/api/contact',
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+
+      await fetch(
+        process.env.NODE_ENV !== 'development'
+          ? `${process.env.NEXT_PUBLIC_PORTFOLIO_URL}/api/contact`
+          : 'http://localhost:3000/api/contact',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
         },
-        data,
-      });
+      );
+
       setSubmitting(false);
       setFieldValue('sent', true);
       setTimeout(() => {

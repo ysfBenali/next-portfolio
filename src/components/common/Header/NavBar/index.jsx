@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from '../../Link';
+import Link from 'next/link';
 import Container from '../../Container';
 import Responsive from '../../Responsive';
 import ToggleTheme from '../ToggleTheme';

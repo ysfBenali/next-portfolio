@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useTheme } from 'providers/ThemeProvider';
-import Link from '../Link';
+import Link from 'next/link';
 import Container from '../Container';
 import Responsive from '../Responsive';
 import {
