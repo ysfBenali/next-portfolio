@@ -1,5 +1,5 @@
 import Container from '@/components/common/Container';
-import Link from '@/components/common/Link';
+import Link from 'next/link';
 import { Wrapper, Tech } from './styles';
 
 const Intro = () => {

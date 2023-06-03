@@ -1,6 +1,6 @@
 'use client';
 
-import Link from '@/components/common/Link';
+import Link from 'next/link';
 import { Wrapper } from './styles';
 
 const MenuItem = ({ text, target, open, onOpen }) => {

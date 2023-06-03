@@ -9,7 +9,7 @@ import SideBar from './SideBar';
 import Responsive from '../Responsive';
 import Container from '../Container';
 import Button from '../Button';
-import Link from '../Link';
+import Link from 'next/link';
 import {
   Avatar,
   DesktopSpacer,
