@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "formik": "^2.2.9",
+    "graphql": "^16.8.0",
     "next": "^13.4.4",
     "next-pwa": "^5.4.1",
     "next-seo": "^5.15.0",
@@ -21,6 +23,10 @@
     "yup": "^0.32.9"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "5.0.0",
+    "@graphql-codegen/client-preset": "4.1.0",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@octokit/graphql-schema": "^14.27.2",
     "@types/react": "18.2.20",
     "@types/react-google-recaptcha": "^2.1.5",
     "@types/styled-components": "^5.1.26",
