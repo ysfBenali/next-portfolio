@@ -1,2 +1,4 @@
 node_modules
 .next
+src/generated/graphql.d.ts
+src/generated/github-schema-loader.js
