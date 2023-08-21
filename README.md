@@ -64,9 +64,9 @@ A quick look at the top-level files and directories :
 │   │   └── thumbnail			# Cover of your website when it's shared to social media
 ├── src
 │   ├── app				# AppDir
-|	|	├── api
-|	|	|	└── contact # Route Handler for sending contact form data
-|	|	├──	error.tsx
+│ 	│ 	├── api
+│ 	│ 	│ 	└── contact # Route Handler for sending contact form data
+│ 	│ 	├──	error.tsx
 │   │   ├── head.tsx
 │   │   ├── layout.tsx
 │   │   └── page.tsx
@@ -78,9 +78,9 @@ A quick look at the top-level files and directories :
 │   ├──config
 │   │   └── next-seo.config.ts	        # Default SEO related tags
 │   ├── constants 			# Contains Global `BREAKPOINTS` and `Z_INDICES` constants
-|	├── generated
-|	|	├── ...
-|	|	└── graphql.d.ts 	# Generated types from github graphql schema
+│ 	├── generated
+│ 	│ 	├── ...
+│ 	│ 	└── graphql.d.ts 	# Generated types from github graphql schema
 │   ├── hooks				# Custom hooks
 │   ├── pages
 │   │   └── api			        # APIs
