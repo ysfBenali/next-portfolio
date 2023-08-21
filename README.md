@@ -1,4 +1,3 @@
-
 # :zap: [Ysfbenali.com](https://ysfbenali.com/)
 
 **next-portfolio** : My personal website, a basic portfolio for developers, built from scratch with Next.js.
@@ -47,11 +46,11 @@
 
 ## :construction_worker_man: Build With
 
-* Next js
-* JavaScript
-* Styled Components
-* Formium
-* Google Recaptcha
+- Next.js
+- TypeScript
+- Styled Components
+- Formium
+- Google Recaptcha
 
 ## :monocle_face: What's inside?
 A quick look at the top-level files and directories :
@@ -64,23 +63,29 @@ A quick look at the top-level files and directories :
 │   │   ├── icons			# Icons
 │   │   └── thumbnail			# Cover of your website when it's shared to social media
 ├── src
-│   ├── app				# AppDir 
-│   │   ├── head.jsx
-│   │   ├── layout.jsx
-│   │   └── page.jsx
+│   ├── app				# AppDir
+|	|	├── api
+|	|	|	└── contact # Route Handler for sending contact form data
+|	|	├──	error.tsx
+│   │   ├── head.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   ├── components			# Components
-│   │   ├── common				
+│   │   ├── common
 │   │   │   ├── ...			# Common components
-│   │   │   ├── GlobalStyles.jsx	# Contains all your global styles
+│   │   │   ├── GlobalStyles.tsx	# Contains all your global styles
 │   │   └── modules
 │   ├──config
-│   │   └── next-seo.config.js	        # Default SEO related tags
+│   │   └── next-seo.config.ts	        # Default SEO related tags
 │   ├── constants 			# Contains Global `BREAKPOINTS` and `Z_INDICES` constants
-│   ├── hooks				# Custom hooks 
-│   ├── pages				
+|	├── generated
+|	|	├── ...
+|	|	└── graphql.d.ts 	# Generated types from github graphql schema
+│   ├── hooks				# Custom hooks
+│   ├── pages
 │   │   └── api			        # APIs
 │   └── providers
-│       └── ThemeProvider.jsx   	# Theme Provider
+│       └── ThemeProvider.tsx   	# Theme Provider
 └── yarn.lock
 ```
 ## :pushpin: Todo
