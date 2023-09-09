@@ -2,28 +2,34 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import ToggleThemeButton from '../ToggleThemeButton';
 import Container from '../../Container';
-import Responsive from '../../Responsive';
-import ToggleTheme from '../ToggleTheme';
-import {
-  Wrapper,
-  NavContainer,
-  Brand,
-  HeaderLeft,
-  Menu,
-  MenuItem,
-  HeaderRight,
-  RightIconWrapper,
-} from './styles';
+import { cn } from '@/lib/utils';
+
+const navigation = [
+  {
+    name: 'About',
+    href: '/#about',
+  },
+  {
+    name: 'Projects',
+    href: '/#projects',
+  },
+  {
+    name: 'Contact',
+    href: '/#contact',
+  },
+];
 
 const NavBar = () => {
-  const [changeDesign, setChangeDesign] = useState<boolean>(false);
+  const [isShortenBrandShown, setIsShortenBrandShown] =
+    useState<boolean>(false);
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 60) {
-      setChangeDesign(true);
+      setIsShortenBrandShown(true);
     } else {
-      setChangeDesign(false);
+      setIsShortenBrandShown(false);
     }
   };
 
@@ -35,35 +41,34 @@ const NavBar = () => {
   }, []);
 
   return (
-    <Wrapper changeDesign={changeDesign}>
-      <NavContainer as={Container}>
-        <HeaderLeft>
+    <div
+      className={cn(
+        'z-20 sticky top-0 mb-8 w-full md:mb-0 transition-all duration-100 ease-linear ',
+        {
+          'bg-blured dark:bg-bluredDark backdrop-blur': isShortenBrandShown,
+        },
+      )}
+    >
+      <Container className="flex items-center justify-between pt-[1.4rem] pb-[0.8rem] font-semibold text-base">
+        <div className="flex items-center">
           <Link href="/" scroll={false}>
-            <Brand>{changeDesign ? '<ysfBenAli />' : 'Youssef BenAli'}</Brand>
+            <div className="brand">
+              {isShortenBrandShown ? '<ysfBenAli />' : 'Youssef BenAli'}
+            </div>
           </Link>
-          <Responsive desktopOnly>
-            <Menu>
-              <Link href="/#about" scroll={false}>
-                <MenuItem>About</MenuItem>
+          <div className="flex items-center justify-between md:hidden">
+            {navigation.map((item) => (
+              <Link href={item.href} scroll={false} key={item.name}>
+                <span className="text-[17px] mx-2 p-2">{item.name}</span>
               </Link>
-              <Link href="/#projects" scroll={false}>
-                <MenuItem>Projects </MenuItem>
-              </Link>
-              <Link href="/#contact" scroll={false}>
-                <MenuItem>Contact</MenuItem>
-              </Link>
-            </Menu>
-          </Responsive>
-        </HeaderLeft>
-        <Responsive desktopOnly>
-          <HeaderRight>
-            <RightIconWrapper>
-              <ToggleTheme />
-            </RightIconWrapper>
-          </HeaderRight>
-        </Responsive>
-      </NavContainer>
-    </Wrapper>
+            ))}
+          </div>
+        </div>
+        <div className="flex items-baseline md:hidden">
+          <ToggleThemeButton />
+        </div>
+      </Container>
+    </div>
   );
 };
 

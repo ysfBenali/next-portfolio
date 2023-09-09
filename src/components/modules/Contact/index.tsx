@@ -1,15 +1,17 @@
 import Image from 'next/image';
 import Container from '@/components/common/Container';
 import ContactForm from './ContactForm';
-import { Wrapper, Details, SvgContainer } from './styles';
 
 const Contact = () => {
   return (
-    <Wrapper as={Container} id="contact">
-      <Details>
+    <Container
+      id="contact"
+      className="flex justify-between items-start pt-9 pb-8 md:flex-col-reverse md:pt-0"
+    >
+      <div className="flex-1 pr-12 md:w-full md:p-0">
         <ContactForm />
-      </Details>
-      <SvgContainer>
+      </div>
+      <div className="flex-1 self-center md:w-full md:py-4 md:px-0">
         <Image
           src="/assets/contact.svg"
           width={500}
@@ -21,8 +23,8 @@ const Contact = () => {
             height: 'auto',
           }}
         />
-      </SvgContainer>
-    </Wrapper>
+      </div>
+    </Container>
   );
 };
 

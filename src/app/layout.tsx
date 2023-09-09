@@ -1,6 +1,30 @@
+import '../../globals.css';
 import Script from 'next/script';
 import { NextSeo } from 'next-seo';
-import StyledComponentsRegistry from '../lib/registry';
+import localFont from '@next/font/local';
+
+const wotfard = localFont({
+  src: [
+    {
+      path: '../../public/fonts/wotfard-regular-webfont.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/wotfard-semibold-webfont.ttf',
+      weight: '600',
+      style: 'semibold',
+    },
+    {
+      path: '../../public/fonts/wotfard-bold-webfont.ttf',
+      weight: '700',
+      style: 'bold',
+    },
+  ],
+
+  variable: '--font-wotfard',
+  display: 'swap',
+});
 
 const url =
   process.env.NODE_ENV !== 'development'
@@ -25,7 +49,7 @@ const setInitialTheme = `
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en" suppressHydrationWarning={true}>
+    <html lang="en" className={`${wotfard.variable}`} suppressHydrationWarning>
       <head>
         <link
           rel="apple-touch-icon"
@@ -113,16 +137,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             __html: setInitialTheme,
           }}
         />
-        {/* <script
-          id="dark-mode-prevent-flash"
-          dangerouslySetInnerHTML={{
-            __html: setInitialTheme,
-          }}
-        /> */}
       </head>
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   );
 };

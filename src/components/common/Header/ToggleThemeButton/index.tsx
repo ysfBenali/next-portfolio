@@ -2,21 +2,20 @@
 
 import { useTheme, useToggleTheme } from '@/providers/ThemeProvider';
 import Image from 'next/image';
-import { Wrapper } from './styles';
 
-const ToggleTheme = () => {
+const ToggleThemeButton = () => {
   const ToggleTheme = useToggleTheme();
   const theme = useTheme();
 
   return (
-    <Wrapper onClick={ToggleTheme}>
+    <button className="cursor-pointer" onClick={ToggleTheme}>
       {theme === 'light' ? (
         <Image src="/assets/icons/moon.svg" width="24" height="24" alt="moon" />
       ) : (
         <Image src="/assets/icons/sun.svg" width="24" height="24" alt="sun" />
       )}
-    </Wrapper>
+    </button>
   );
 };
 
-export default ToggleTheme;
+export default ToggleThemeButton;
