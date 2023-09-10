@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --scrollbarBG: white;
+    --thumbBG: #aaaaaa;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+  [data-theme='dark'] {
+    --scrollbarBG: #444444;
+    --social-svg-fill-color: invert(100%) sepia(0%) saturate(7426%)
+      hue-rotate(117deg) brightness(119%) contrast(119%);
+  }
+
+  html,
+  body {
+    @apply m-0 p-0;
+  }
+  body,
+  footer {
+    @apply bg-gradient-to-t dark:bg-gradient-to-b from-blizzard-blue-200 dark:from-french-pass/[0.102] to-blizzard-blue-150;
+  }
+  *,
+  ::after,
+  ::before {
+    @apply box-border leading-[1.6];
+  }
+
+  body::-webkit-scrollbar {
+    @apply w-[14px];
+  }
+  body {
+    @apply h-full min-w-full bg-blizzard-blue-150 dark:bg-midnight-blue text-black dark:text-white;
+    scrollbar-width: thin;
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    @apply border-[3px] border-solid rounded-md dark:border-gray-700 hover:bg-gray-300;
+    border-color: var(--scrollbarBG);
+    background-color: var(--thumbBG);
+  }
+  body,
+  input,
+  button,
+  select,
+  option {
+    @apply font-normal;
+  }
+  a {
+    @apply no-underline;
+  }
+  p {
+    @apply text-[17px] leading-[1.6];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    @apply m-0 font-medium;
+  }
+  h1 {
+    @apply text-[37px];
+  }
+  h2 {
+    @apply text-[29px];
+  }
+  h3 {
+    @apply text-[25px];
+  }
+  h4 {
+    @apply text-[20px];
+  }
+  h5 {
+    @apply text-[17px];
+  }
+  h6 {
+    @apply text-[10px];
+  }
+
+  img {
+    @apply max-w-full mx-0 mt-0 p-0;
+  }
+
+  select option {
+    @apply bg-gray-200 dark:bg-gray-700;
+  }
+
+  .column {
+    @apply grid grid-cols-1 gap-[6px] align-baseline text-left sm:pt-3 sm:pb-3 sm:gap-[15px] sm:w-full sm:text-center;
+  }
+
+  .links {
+    @apply text-center self-end sm:pb-1;
+  }
+  .links ul {
+    @apply flex justify-center p-0 m-0;
+  }
+  .links a {
+    @apply text-[15px] font-normal;
+  }
+
+  .input {
+    @apply w-full rounded p-3 border-2 border-solid border-primary dark:border-primaryDark bg-transparent text-sm focus:outline-none focus:ring-1 focus:ring-sky-500;
+  }
+  .input.input-error {
+    @apply border-error focus:ring-transparent;
+  }
+
+  .brand {
+    @apply cursor-pointer text-primary dark:text-primaryDark text-[21px] mr-8 whitespace-nowrap no-underline;
+  }
+
+  .hamburger div {
+    @apply bg-black dark:bg-white relative w-8 h-1 rounded-[10px] transition-all duration-300 ease-linear origin-[1px];
+  }
+}

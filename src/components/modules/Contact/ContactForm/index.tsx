@@ -4,8 +4,7 @@ import * as Yup from 'yup';
 import Recaptcha from 'react-google-recaptcha';
 import { Formik, Form, FastField, ErrorMessage, FormikHelpers } from 'formik';
 import Button from '@/components/common/Button';
-import Input from '@/components/common/Input';
-import { Error, InputWrapper } from './styles';
+import { cn } from '@/lib/utils';
 
 interface Values {
   fullName: string;
@@ -17,21 +16,21 @@ interface Values {
   sent: boolean;
 }
 
-const ContactForm = () => {
-  const Schema = Yup.object().shape({
-    fullName: Yup.string().required('Full name field is required!'),
-    email: Yup.string()
-      .email('Invalid email')
-      .required('Email field is required!'),
-    subject: Yup.string().required('Subject field is required!'),
-    reason: Yup.string().required('Reason field is required!'),
-    message: Yup.string().required('Message field is required!'),
-    recaptcha:
-      process.env.NODE_ENV !== 'development'
-        ? Yup.string().required('reCAPTCHA is mandatory ')
-        : Yup.string(),
-  });
+const Schema = Yup.object().shape({
+  fullName: Yup.string().required('Full name field is required!'),
+  email: Yup.string()
+    .email('Invalid email')
+    .required('Email field is required!'),
+  subject: Yup.string().required('Subject field is required!'),
+  reason: Yup.string().required('Reason field is required!'),
+  message: Yup.string().required('Message field is required!'),
+  recaptcha:
+    process.env.NODE_ENV !== 'development'
+      ? Yup.string().required('reCAPTCHA is mandatory ')
+      : Yup.string(),
+});
 
+const ContactForm = () => {
   const handleSubmitForm = async (
     data: Values,
     { resetForm, setSubmitting, setFieldValue }: FormikHelpers<Values>,
@@ -87,82 +86,108 @@ const ContactForm = () => {
         setFieldValue,
       }) => (
         <Form>
-          <InputWrapper>
-            <Input
+          <div className="mb-3">
+            <FastField
+              className={cn('input', {
+                'input-error': errors.fullName && touched.fullName,
+              })}
               id="fullName"
               name="fullName"
               type="text"
               placeholder="Full Name*"
-              as={FastField}
+              component="input"
               onChange={handleChange}
               value={values.fullName}
-              error={errors.fullName && touched.fullName}
             />
-            <ErrorMessage name="fullName" component={Error} />
-          </InputWrapper>
-          <InputWrapper>
-            <Input
+            <ErrorMessage
+              className="text-errorDark dark:text-error"
+              name="fullName"
+              component="span"
+            />
+          </div>
+          <div className="mb-3">
+            <FastField
+              className={cn('input', {
+                'input-error': errors.email && touched.email,
+              })}
               id="email"
               name="email"
               type="email"
               placeholder="Email*"
-              as={FastField}
               onChange={handleChange}
               value={values.email}
-              error={errors.email && touched.email}
             />
-            <ErrorMessage name="email" component={Error} />
-          </InputWrapper>
-          <InputWrapper>
-            <Input
+            <ErrorMessage
+              className="text-errorDark dark:text-error"
+              name="email"
+              component="span"
+            />
+          </div>
+          <div className="mb-3">
+            <FastField
+              className={cn('input', {
+                'input-error': errors.subject && touched.subject,
+              })}
               id="subject"
               name="subject"
               type="text"
               placeholder="Subject*"
-              as={FastField}
               onChange={handleChange}
               value={values.subject}
-              error={errors.subject && touched.subject}
             />
-            <ErrorMessage name="subject" component={Error} />
-          </InputWrapper>
-          <InputWrapper>
-            <Input
+            <ErrorMessage
+              className="text-errorDark dark:text-error"
+              name="subject"
+              component="span"
+            />
+          </div>
+          <div className="mb-3">
+            <FastField
+              className="input"
               id="reason"
               name="reason"
               as="select"
+              aria-label="reason"
               value={values.reason}
               onChange={handleChange}
             >
               <option value="Hi">Just to say Hi</option>
               <option value="Hire">Hire me</option>
               <option value="Other">Other</option>
-            </Input>
-            <ErrorMessage name="reason" component={Error} />
-          </InputWrapper>
-          <InputWrapper>
-            <Input
+            </FastField>
+            <ErrorMessage
+              className="text-errorDark dark:text-error"
+              name="reason"
+              component="span"
+            />
+          </div>
+          <div className="mb-3">
+            <FastField
+              className={cn('input resize-none', {
+                'input-error': errors.message && touched.message,
+              })}
               id="message"
               name="message"
               type="text"
               component="textarea"
-              rows={6}
-              textarea="textarea"
-              as={FastField}
+              rows={10}
               placeholder="Message*"
               onChange={handleChange}
               value={values.message}
-              error={errors.message && touched.message}
             />
-            <ErrorMessage name="message" component={Error} />
-          </InputWrapper>
+            <ErrorMessage
+              className="text-errorDark dark:text-error"
+              name="message"
+              component="span"
+            />
+          </div>
           {values.fullName &&
             values.email &&
             values.subject &&
             values.reason &&
             values.message &&
             process.env.NODE_ENV !== 'development' && (
-              <InputWrapper>
+              <div className="mb-3">
                 <FastField
                   component={Recaptcha}
                   sitekey={process.env.NEXT_PUBLIC_CAPTCHA_KEY}
@@ -171,21 +196,25 @@ const ContactForm = () => {
                     setFieldValue('recaptcha', value)
                   }
                 />
-                <ErrorMessage name="recaptcha" component={Error} />
-              </InputWrapper>
+                <ErrorMessage
+                  className="text-errorDark dark:text-error"
+                  name="recaptcha"
+                  component="span"
+                />
+              </div>
             )}
           {values.sent && (
-            <InputWrapper>
+            <div className="mb-3">
               <h5>
                 I have received your message, I will get back to you ASAP :) .
               </h5>
-            </InputWrapper>
+            </div>
           )}
-          <InputWrapper>
+          <div className="mb-3">
             <Button type="submit" disabled={isSubmitting}>
               Send
             </Button>
-          </InputWrapper>
+          </div>
         </Form>
       )}
     </Formik>

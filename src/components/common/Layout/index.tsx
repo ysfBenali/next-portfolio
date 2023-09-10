@@ -1,15 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { useTheme } from '@/providers/ThemeProvider';
-import GlobalStyle from '../GlobalStyles';
 import Header from '../Header';
 import Footer from '../Footer';
-import { Wrapper } from './styles';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
-  const theme = useTheme();
-
   const [open, setOpen] = useState(false);
   const [hasMounted, setHasMounted] = useState(false);
 
@@ -17,18 +12,25 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     setHasMounted(true);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
+
   if (!hasMounted) {
     return null;
   }
 
   return (
     <>
-      <Wrapper>
-        <GlobalStyle theme={theme} open={open} />
+      <div className="flex flex-col min-h-screen">
         <Header open={open} onOpen={setOpen} />
         {children}
         <Footer />
-      </Wrapper>
+      </div>
     </>
   );
 };
