@@ -5,9 +5,11 @@
 ## :sparkles: Features
 
 - Support Light & Dark Theme via [`Tailwindcss`](https://tailwindcss.com/).
-- High Score on `Performance`, `a11y`, `Best Practices`, `SEO` and `PWA`:
+- High Score on `Performance`, `A11y`, `Best Practices`, `SEO` and `PWA`:
 
-  > [Lighthouse test](https://builder-dot-lighthouse-ci.appspot.com/report.1647794926218.html) <br /> > [Page speed test](https://pagespeed.web.dev/analysis/https-www-ysfbenali-com/jbmvdbe8j5?form_factor=desktop) <br /> > [Pingdom test](https://tools.pingdom.com/#5fea0d93f4000000)
+  > [Lighthouse test](https://builder-dot-lighthouse-ci.appspot.com/report.1647794926218.html) <br />
+  > [Page speed test](https://pagespeed.web.dev/analysis/https-www-ysfbenali-com/8kusnhc228?form_factor=desktop) <br />
+  > [Pingdom test](https://tools.pingdom.com/#5fea0d93f4000000)
 
 - Fully Responsive.
 - PWA (desktop & mobile).
@@ -18,18 +20,6 @@
 - Google analytics.
 - Prettier, ESLint, Husky and Lint-staged integration.
 
-## :pencil: Sections
-
-> :heavy_check_mark: **Quick Into**
->
-> :heavy*check_mark: **About :** \_A summary about me and my skills.*
->
-> :heavy*check_mark: **Popular Projects :** \_Showcase my Open Source Projects with most stars on my Github.*
->
-> :heavy_check_mark: **Contact Me**
->
-> :heavy*check_mark: **Social Media Links :** \_Discord, Github, Linkedin, Twitter.*
-
 ## :rocket: Getting Started
 
 1. Grab your Github token from [GitHub](https://github.com/settings/tokens/new)
@@ -37,11 +27,10 @@
 3. Grab a Google recaptcha V2 key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
 4. Clone this repo
    ```bash
-   git clone https://github.com/ysfBenali/next-portfolio && cd next-portfolio
+   git clone https://github.com/ysfBenali/nex-portfolio && cd next-portfolio
    ```
 5. Run `cp .env.development.local.template .env`
-   //6. nvm use to use the correct node version
-6. run `nvm use` to use the correct node version defined in `.nvmrc`
+6. Run `nvm use` to use the correct node version defined in `.nvmrc`
 7. Run `yarn && yarn dev`
    > Serve with hot reload at localhost:3000
 
@@ -65,7 +54,7 @@ A quick look at the top-level files and directories :
 │   │   ├── contact.svg			# Illustrations from (undraw.co)
 │   │   ├── icons			# Icons
 │   │   └── thumbnail			# Cover of your website when it's shared to social media
-│   ├── fonts				# self-hosted fonts with @next/font
+│   ├── fonts				# Self-hosted fonts with @next/font
 ├── src
 │   ├── app				# AppDir
 │   │	├── api
