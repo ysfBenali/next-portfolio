@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getCalApi } from '@calcom/embed-react';
 import Container from '../Container';
 import Burger from './Burger';
 import NavBar from './NavBar';
@@ -17,6 +19,17 @@ const Header = ({
   onOpen: (open: boolean) => void;
 }) => {
   const yearsOfExperience = new Date().getFullYear() - 2019;
+
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi();
+      cal('ui', {
+        theme: 'dark',
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+      });
+    })();
+  }, []);
 
   return (
     <>
@@ -35,6 +48,12 @@ const Header = ({
             <Link href="/#contact">
               <Button>Hire Me</Button>
             </Link>
+            <Button
+              className="ml-3 w-40"
+              data-cal-link={process.env.NEXT_PUBLIC_CAL_USERNAME}
+            >
+              book a meeting
+            </Button>
           </div>
           <div className="flex flex-1 justify-center overflow-hidden md:pb-3">
             <Image

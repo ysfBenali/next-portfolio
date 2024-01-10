@@ -7,9 +7,7 @@
 - Support Light & Dark Theme via [`Tailwindcss`](https://tailwindcss.com/).
 - High Score on `Performance`, `A11y`, `Best Practices`, `SEO` and `PWA`:
 
-  > [Lighthouse test](https://builder-dot-lighthouse-ci.appspot.com/report.1647794926218.html) <br />
-  > [Page speed test](https://pagespeed.web.dev/analysis/https-www-ysfbenali-com/8kusnhc228?form_factor=desktop) <br />
-  > [Pingdom test](https://tools.pingdom.com/#5fea0d93f4000000)
+  > [Lighthouse test](https://builder-dot-lighthouse-ci.appspot.com/report.1647794926218.html) <br /> > [Page speed test](https://pagespeed.web.dev/analysis/https-www-ysfbenali-com/8kusnhc228?form_factor=desktop) <br /> > [Pingdom test](https://tools.pingdom.com/#5fea0d93f4000000)
 
 - Fully Responsive.
 - PWA (desktop & mobile).
@@ -25,13 +23,14 @@
 1. Grab your Github token from [GitHub](https://github.com/settings/tokens/new)
 2. Create an account at [Formium](https://formium.io/) and grab your form endpoint url
 3. Grab a Google recaptcha V2 key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
-4. Clone this repo
+4. Create an account at [Cal](https://cal.com/) and grab your calendar id.
+5. Clone this repo
    ```bash
    git clone https://github.com/ysfBenali/nex-portfolio && cd next-portfolio
    ```
-5. Run `cp .env.development.local.template .env`
-6. Run `nvm use` to use the correct node version defined in `.nvmrc`
-7. Run `yarn && yarn dev`
+6. Run `cp .env.development.local.template .env`
+7. Run `nvm use` to use the correct node version defined in `.nvmrc`
+8. Run `yarn && yarn dev`
    > Serve with hot reload at localhost:3000
 
 ## :construction_worker_man: Build With
