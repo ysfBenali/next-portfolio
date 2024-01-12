@@ -46,13 +46,13 @@ const Header = ({
               quality software.
             </h2>
             <Link href="/#contact">
-              <Button>Hire Me</Button>
+              <Button className="w-40 my-2 mx-1">Hire me</Button>
             </Link>
             <Button
-              className="ml-3 w-40"
+              className="w-40 my-2 mx-1"
               data-cal-link={process.env.NEXT_PUBLIC_CAL_USERNAME}
             >
-              book a meeting
+              Book a meeting
             </Button>
           </div>
           <div className="flex flex-1 justify-center overflow-hidden md:pb-3">
