@@ -51,14 +51,14 @@ const NavBar = () => {
     >
       <Container className="flex items-center justify-between pt-[1.4rem] pb-[0.8rem] font-semibold text-base">
         <div className="flex items-center">
-          <Link href="/" scroll={false}>
+          <Link href="/">
             <div className="brand">
               {isShortenBrandShown ? '<ysfBenAli />' : 'Youssef BenAli'}
             </div>
           </Link>
           <div className="flex items-center justify-between md:hidden">
             {navigation.map((item) => (
-              <Link href={item.href} scroll={false} key={item.name}>
+              <Link href={item.href} key={item.name}>
                 <span className="text-[17px] mx-2 p-2">{item.name}</span>
               </Link>
             ))}

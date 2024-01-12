@@ -45,11 +45,7 @@ const Intro = () => {
         So I'm looking for an opportunity to develop my skills, be
         team-oriented, and have a happy workplace, If you are interested in
         hiring a Front-end developer (React/Next), you are in the right place.
-        <Link
-          href="/#contact"
-          scroll={false}
-          className="text-primary dark:text-primaryDark"
-        >
+        <Link href="/#contact" className="text-primary dark:text-primaryDark">
           {' '}
           Get in touch{' '}
         </Link>

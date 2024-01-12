@@ -1,7 +1,78 @@
 import '../../globals.css';
+import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { NextSeo } from 'next-seo';
-import localFont from '@next/font/local';
+import localFont from 'next/font/local';
+
+const title = 'Youssef BenAli';
+const description =
+  "I'm Youssef BenAli. I like writing code. Especially in Javascript and React. Currently working as a Full Stack Web Developer.";
+const url =
+  process.env.NODE_ENV !== 'development'
+    ? (process.env.NEXT_PUBLIC_PORTFOLIO_URL as string)
+    : 'http://localhost:3000';
+
+export const viewport: Viewport = {
+  themeColor: '#675eff',
+};
+
+export const metadata: Metadata = {
+  title: title,
+  description: description,
+  metadataBase: new URL(url),
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title,
+    description,
+    url,
+    images: [
+      {
+        url: `${url}/assets/thumbnail/thumbnail.png`,
+        width: 1200,
+        height: 600,
+        alt: "I'm Youssef BenAli",
+      },
+    ],
+  },
+  icons: {
+    icon: [
+      {
+        url: '/assets/favicon/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/assets/favicon/favicon-16x16.png',
+        sizes: '16x16',
+        type: 'image/png',
+      },
+    ],
+    shortcut: '/assets/favicon/favicon.ico',
+    apple: [
+      {
+        url: '/assets/favicon/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+    other: {
+      rel: 'mask-icon',
+      url: '/assets/favicon/safari-pinned-tab.svg',
+    },
+  },
+  manifest: '/assets/favicon/site.webmanifest',
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    site: url,
+    creator: '@ysfBenAli',
+    images: {
+      url: `${url}/assets/thumbnail/thumbnail.png`,
+      alt: "I'm Youssef BenAli",
+    },
+  },
+};
 
 const wotfard = localFont({
   src: [
@@ -26,15 +97,6 @@ const wotfard = localFont({
   display: 'swap',
 });
 
-const url =
-  process.env.NODE_ENV !== 'development'
-    ? (process.env.NEXT_PUBLIC_PORTFOLIO_URL as string)
-    : 'http://localhost:3000';
-
-const title = 'Youssef BenAli | Hello world !';
-const description =
-  "I'm Youssef BenAli. I like writing code. Especially in Javascript and React. Currently working as a Full Stack Web Developer.";
-
 const setInitialTheme = `
   function getUserPreference() {
     if(window.localStorage.getItem('theme')) {
@@ -51,85 +113,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en" className={`${wotfard.variable}`} suppressHydrationWarning>
       <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/assets/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/assets/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/assets/favicon/safari-pinned-tab.svg"
-          color="#5bbad5"
-        />
-        <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta
-          name="msapplication-config"
-          content="/assets/favicon/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#675eff" />
-        <NextSeo
-          useAppDir={true}
-          title={title}
-          description={description}
-          additionalMetaTags={[
-            {
-              name: 'image',
-              content: `${url}/assets/thumbnail/thumbnail.png`,
-            },
-            {
-              property: 'og:title',
-              content: title,
-            },
-            {
-              property: 'og:description',
-              content: description,
-            },
-            {
-              property: 'og:url',
-              content: url,
-            },
-            {
-              property: 'og:image',
-              content: `${url}/assets/thumbnail/thumbnail.png`,
-            },
-            {
-              name: 'twitter:url',
-              content: url,
-            },
-            {
-              name: 'twitter:title',
-              content: title,
-            },
-            {
-              name: 'twitter:description',
-              content: description,
-            },
-            {
-              name: 'twitter:image:src',
-              content: `${url}/assets/thumbnail/thumbnail.png`,
-            },
-            {
-              name: 'twitter:image',
-              content: `${url}/assets/thumbnail/thumbnail.png`,
-            },
-          ]}
-        />
         <Script
           id="dark-mode-prevent-flash"
           strategy="afterInteractive"
