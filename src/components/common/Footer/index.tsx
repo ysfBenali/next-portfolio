@@ -15,7 +15,7 @@ const Footer = () => {
       <Container className="flex flex-row content-between pt-8 pb-8 z-30 sm:flex-col ">
         <div className="flex flex-[2] flex-col justify-between items-start sm:items-center md:flex-1">
           <div className="flex flex-col items-start text-left sm:text-center">
-            <Link href="/#" scroll={false}>
+            <Link href="/#">
               <span className="flex text-primary dark:text-primaryDark text-[21px] font-semibold -tracking-wide">
                 Youssef BenAli
               </span>
@@ -33,15 +33,9 @@ const Footer = () => {
             <span className="pt-[5px] pb-[0.3rem] text-[17px] font-medium text-gray-600 dark:text-gray-500 sm:hidden">
               Links
             </span>
-            <Link href="/#about" scroll={false}>
-              About
-            </Link>
-            <Link href="/#projects" scroll={false}>
-              Projects
-            </Link>
-            <Link href="/#contact" scroll={false}>
-              Contact
-            </Link>
+            <Link href="/#about">About</Link>
+            <Link href="/#projects">Projects</Link>
+            <Link href="/#contact">Contact</Link>
           </div>
           <div className={cn('column', 'sm:pb-4')}>
             <h5 className="font-medium text-center text-[17px] pt-[5px] mb-[1.2rem] tracking-[1px] sm:hidden">
